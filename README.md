@@ -1,8 +1,5 @@
 # Slides
-Repository for hosting various slideshows based on [reveal.js](https://github.com/hakimel/reveal.js/).
-
-## Available slideshows
-  - [Javascript for newbies](https://ezpaarse-project.github.io/slides/javascript-for-newbies/)
+Repository for hosting various slideshows based on [reveal.js](https://github.com/hakimel/reveal.js/). Available at [ezpaarse-project.github.io](https://ezpaarse-project.github.io/slides/)
 
 ## How to add a slideshow
 Create a new directory for your slideshow:
