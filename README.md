@@ -1,5 +1,5 @@
 # Slides
-Repository for hosting various slideshows based on [reveal.js](https://github.com/hakimel/reveal.js/). Available at [ezpaarse-project.github.io](https://ezpaarse-project.github.io/slides/)
+Repository for hosting various slideshows based on [reveal.js](https://github.com/hakimel/reveal.js/). Available at [ezpaarse-project.github.io](https://ezpaarse-project.github.io/slides/).
 
 ## How to add a slideshow
 Create a new directory for your slideshow:
@@ -32,4 +32,4 @@ Here is one solution using Node.js:
   # Run the webserver on the root of the repository
   http-server /path/to/the/slides
 ```
-Then open [http://localhost:8080/](http://localhost:8080/)
+Then open [http://localhost:8080/](http://localhost:8080/).
