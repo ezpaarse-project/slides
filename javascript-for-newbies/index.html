@@ -1,0 +1,540 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js – The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="../reveal.js/css/theme/blood.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="../reveal.js/lib/css/zenburn.css">
+
+		<style>
+			.red { color: #ff2c2d }
+			code {
+				background-color: #313131 !important;
+				border-radius: 3px;
+			}
+		</style>
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? '../reveal.js/css/print/pdf.css' : '../reveal.js/css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="../reveal.js/lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Javascript</h1>
+					<h3>Pour les nuls</h3>
+					<p>
+						<small>Inspiré par <a href="http://github.com/sethvincent/javascripting">Javascripting</a></small>
+					</p>
+				</section>
+
+				<section>
+					<section>
+						<h2>Introduction</h2>
+						<p>Pour ce TP, nous allons avoir besoin d'un outil pour exécuter notre code Javascript.</p>
+						<p>Nous utiliserons <a href="https://jsbin.com/?js,console" target="_blank">JSbin</a>.</p>
+					</section>
+					<section>
+						<p>Dans l'onglet <span class="red">Javascript</span>, nous écrivons le code à exécuter.</p>
+						<p>L'onglet <span class="red">Console</span> contient l'affichage du programme, ou les éventuelles erreurs.</p>
+					</section>
+					<section>
+						<h2>Exercice</h2>
+						<small>
+							<ul>
+								<li class="fragment fade-up">Ouvrez <a href="https://jsbin.com/?js,console" target="_blank">JSbin</a></li>
+								<li class="fragment fade-up">
+									Dans l'onglet <span class="red">Javascript</span>, entrez le code suivant :
+									<pre><code class="hljs javascript" data-trim contenteditable>
+										console.log('hello');
+									</pre></code>
+								</li>
+								<li class="fragment fade-up">Dans l'onglet <span class="red">Console</span>, cliquez sur <span class="red">run</span>.</li>
+							</ul>
+							<p class="fragment fade-up">La console doit afficher <code>"hello"</code></p>
+						</small>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Variables</h2>
+						<p>Une variable est un nom qui fait référence à une valeur spécifique. Les variables sont déclarées en utilisant le mot clé <span class="red">var</span> suivi du nom de la variable.</p>
+					</section>
+					<section>
+						<pre><code class="hljs javascript" data-trim contenteditable>
+							var example;
+						</code></pre>
+						<p>La variable ci-dessus est <span class="red">déclarée</span>, mais elle n'est pas <span class="red">définie</span> (elle ne référence aucune valeur pour le moment).</p>
+					</section>
+					<section>
+						<p>Voici un exemple de définition de variable, lui faisant contenir une valeur spécifique :</p>
+						<pre><code class="hljs javascript" data-trim contenteditable>
+							var example = 'some string';
+						</code></pre>
+					</section>
+					<section>
+						<h2>Note</h2>
+						<p>Une variable est <span class="red">déclarée</span> en utilisant var et utilise le signe égal pour <span class="red">assigner</span> la valeur qu'elle référence. Nous utilisons communément l'expression "Assigner une valeur à une variable".</p>
+					</section>
+					<section>
+						<h2>Exercice</h2>
+						<small>
+							<ul>
+								<li class="fragment fade-up">Déclarez une variable nommée <code>example</code></li>
+								<li class="fragment fade-up">Assignez la valeur <code>'some string'</code> à la variable <code>example</code>.</li>
+								<li class="fragment fade-up">Utilisez ensuite <code>console.log()</code> pour afficher la variable <code>example</code> dans la console.</li>
+							</ul>
+							<p class="fragment fade-up">La console doit afficher <code>'some string'</code></p>
+						</small>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Chaînes de caractères</h2>
+						<p>Une chaine de caractères peut être n'importe quelle valeur entourée par
+  des guillemets.</p>
+					</section>
+					<section>
+						<p>Il peut s'agir de guillemets simples ou doubles :</p>
+
+						<pre><code class="hljs javascript" data-trim contenteditable>
+							'this is a string'
+							"this is also a string"
+						</code></pre>
+					</section>
+					<section>
+						<p>Vous allez assez souvent avoir besoin de savoir combien de caractères sont contenus dans une chaîne de caractères.</p>
+						<p>Pour cela vous allez utiliser la propriété <code>.length</code>. Voici un exemple :</p>
+						<pre><code class="hljs javascript" data-trim contenteditable>
+							var example = 'example string';
+							example.length
+						</code></pre>
+					</section>
+					<section>
+						<h2>Exercice</h2>
+						<small>
+							<ul>
+								<li class="fragment fade-up">Créez une variable nommée <code>example</code>.</li>
+								<li class="fragment fade-up">Assignez la chaîne de caractères <code>'example string'</code> à la variable <code>example</code>.</li>
+								<li class="fragment fade-up">Utilisez <code>console.log</code> pour afficher la longueur de la chaîne de caractères dans la console.</li>
+							</ul>
+							<p class="fragment fade-up">La console doit afficher <code>14</code></p>
+						</small>
+					</section>
+					<section>
+						<p>Vous allez souvent avoir besoin de changer le contenu d'une chaîne de caractères.</p>
+						<p>Les chaînes de caractères ont des fonctionnalités directement intégrées qui vous permettent de manipuler leur contenu.</p>
+					</section>
+					<section>
+						<p>Voici un exemple qui utilise la méthode <code>.replace()</code> :</p>
+						<pre><code class="hljs javascript" data-trim contenteditable>
+							var example = 'this example exists';
+							example = example.replace('exists', 'is awesome');
+							console.log(example);
+						</code></pre>
+					</section>
+					<section>
+						<p>Notez que pour modifier la valeur contenue dans la variable exemple, nous devons utiliser encore une fois le signe <span class="red">égal</span>, mais cette fois avec la méthode example.replace() à la droite du égal.</p>
+					</section>
+					<section>
+						<h2>Exercice</h2>
+						<small>
+							<ul>
+								<li class="fragment fade-up">Définissez une variable nommée <code>pizza</code> qui contient cette chaîne de caractères : <code>'pizza is alright'</code></li>
+								<li class="fragment fade-up">Utilisez la méthode <code>.replace()</code> pour modifier <code>alright</code> en <code>wonderful</code>.</li>
+								<li class="fragment fade-up">Utilisez <code>console.log()</code> pour afficher le résultat de la méthode <code>.replace()</code> dans la console.</li>
+							</ul>
+							<p class="fragment fade-up">La console doit afficher <code>"pizza is wonderful"</code></p>
+						</small>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Nombres</h2>
+						<p>Les nombres peuvent être des <span class="red">entiers</span>, comme <code>2</code>, <code>14</code>, ou <code>4353</code>, ou décimaux (aussi appelés <span class="red">flottants</span>), comme <code>3.14</code>, <code>1.5</code>, ou <code>100.7893423</code>. Contrairement aux chaînes de caractères, les nombres ne sont pas entourés par des guillemets.</p>
+					</section>
+					<section>
+						<h2>Exercice</h2>
+						<small>
+							<ul>
+								<li class="fragment fade-up">Définissez une variable nommée <code>example</code> qui contient l'entier <code>123456789</code>.</li>
+								<li class="fragment fade-up">Utilisez <code>console.log()</code> pour afficher ce nombre dans la console.</li>
+							</ul>
+							<p class="fragment fade-up">La console doit afficher <code>123456789</code></p>
+						</small>
+					</section>
+					<section>
+						<p>Nous pouvons faire des mathématiques basiques avec les operateurs tels que  <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>, et <code>%</code>.</p>
+						<pre><code class="hljs javascript" data-trim contenteditable>
+							var example = (1 + 3) / 2;
+						</code></pre>
+						<p>Pour des maths plus complexes, nous pouvons utiliser l'objet <code>Math</code>.</p>
+					</section>
+					<section>
+						<h2>Exercice</h2>
+						<small>
+							<ul>
+								<li class="fragment fade-up">Définissez une variable nommée <code>roundUp</code> qui contient le flottant <code>1.5</code> multiplié par <code>3</code>.</li>
+							</ul>
+							<p class="fragment fade-up">
+								Nous allons utiliser la méthode Math.round() pour arrondir ce nombre. Cette méthode retourne l'arrondi entier le plus proche. Exemple : <code>Math.round(0.5);</code>
+							</p>
+							<ul>
+								<li class="fragment fade-up">Définissez une seconde variable nommée <code>rounded</code> qui contient le résultat de la méthode <code>Math.round()</code>, en lui passant la variable <code>roundUp</code> en argument.</li>
+								<li class="fragment fade-up">Utilisez <code>console.log()</code> pour afficher ce nombre dans la console.</li>
+							</ul>
+							<p class="fragment fade-up">La console doit afficher <code>5</code></p>
+						</small>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Conditions</h2>
+						<p>Les instructions conditionnelles servent à changer le flux d'exécution d'un programme selon des conditions booléennes spécifiques.</p>
+					</section>
+					<section>
+						<p>Une instruction conditionnelle ressemble à ça :</p>
+						<pre><code class="hljs javascript" data-trim contenteditable>
+							if (n < 1) {
+							  console.log('the variable n is less than 1.');
+							} else {
+							  console.log('the variable n is greater than or equal to 1.');
+							}
+						</code></pre>
+					</section>
+					<section>
+						<p>Dans les parenthèses vous devez entrer une expression logique, ce qui veut dire que le résultat de l'instruction est soit vrai ( <code>true</code> ) soit faux ( <code>false</code> ).</p>
+						<p>Le bloc <code>else</code> est optionnel et contient le code qui sera exécuté si la condition est fausse.</p>
+					</section>
+					<section>
+						<p>Opérateurs logiques :</p>
+						<ul>
+							<li><code><</code> : inférieur</li>
+							<li><code>></code> : supérieur</li>
+							<li><code><=</code> : inférieur ou égal</li>
+							<li><code>>=</code> : supérieur ou égal</li>
+							<li><code>===</code> : strictement égal</li>
+							<li><code>!==</code> : différent</li>
+						</ul>
+					</section>
+					<section>
+						<h2>Exercice</h2>
+						<small>
+							<ul>
+								<li class="fragment fade-up">Déclarez une variable <code>fruit</code>.</li>
+								<li class="fragment fade-up">Assignez à la variable <code>fruit</code> la chaîne de caractères <code>orange</code>.</li>
+								<li class="fragment fade-up">Utilisez ensuite <code>console.log()</code> pour afficher « The fruit name has more than five characters. » si la longueur du contenu de la variable <code>fruit</code> est supérieure à cinq. Sinon, affichez « The fruit name has five characters or less. »</li>
+							</ul>
+							<p class="fragment fade-up">La console doit afficher <code>"The fruit name has more than five characters."</code></p>
+						</small>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Boucle for</h2>
+						<p>Les boucles for vous permettent de répéter l'exécution d'un bloc de code un certain nombre de fois.</p>
+					</section>
+					<section>
+						<p>Cette boucle for affiche dans la console dix fois :</p>
+						<pre><code class="hljs javascript" data-trim contenteditable>
+							for (var i = 0; i < 10; i++) {
+								// affiche les nombres de 0 a 9
+								console.log(i)
+							}
+						</code></pre>
+					</section>
+					<section>
+						<p>La première partie, <span class="red">var i = 0</span>, n'est exécutée qu'une fois au début de la boucle. La variable <span class="red">i</span> est utilisée pour compter le nombre d'exécutions de la boucle.</p>
+					</section>
+					<section>
+						<p>La seconde partie, <span class="red">i < 10</span>, est vérifiée au début de chaque itération de la boucle avant que le code contenu ne s'exécute. Si la condition est valide, le code contenu dans la boucle est exécuté. Sinon, la boucle est terminée. La condition <span class="red">i < 10;</span> indique que la boucle va continuer de s'exécuter tant que <span class="red">i</span> est inférieur à <span class="red">10</span>.</p>
+					</section>
+					<section>
+						<p>La partie finale, <span class="red">i++</span>, est exécutée à la fin de chaque boucle. Elle incrémente la variable i après chaque itération. Dès que i atteint 10, la boucle est terminée.</p>
+					</section>
+					<section>
+						<h2>Exercice</h2>
+						<small>
+							<ul>
+								<li class="fragment fade-up">Définissez une variable nommée <code>total</code> et assignez lui la valeur <code>0</code>.</li>
+								<li class="fragment fade-up">Créez une seconde variable nommée <code>limit</code> et assignez lui la valeur <code>10</code>.</li>
+								<li class="fragment fade-up">Créez une boucle <code>for</code> avec une variable <code>i</code> commençant à <code>0</code> et s'incrémentant à chaque itération de la boucle. La boucle doit s'exécuter aussi longtemps que <code>i</code> est strictement inférieur à <code>limit</code>.</li>
+								<li class="fragment fade-up">À chaque itération de la boucle, ajoutez le nombre i à la variable <code>total</code>. Pour faire cela, vous pouvez utiliser l'instruction suivante : <code>total += i;</code></li>
+								<li class="fragment fade-up">Après la boucle, utilisez <code>console.log()</code> pour afficher la variable <code>total</code> dans le terminal.</li>
+							</ul>
+							<p class="fragment fade-up">La console doit afficher <code>45</code></p>
+						</small>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Tableaux</h2>
+						<p>Un tableau est une liste de valeurs.</p>
+						<p>Voici un exemple :</p>
+						<pre><code class="hljs javascript" data-trim contenteditable>
+							var pets = ['cat', 'dog', 'rat'];
+						</code></pre>
+					</section>
+					<section>
+						<h2>Exercice</h2>
+						<small>
+							<ul>
+								<li class="fragment fade-up">Définissez une variable nommée <code>pizzaToppings</code> qui contient un tableau composé de trois chaînes de caractères dans cet ordre : <code>tomato sauce</code>, <code>cheese</code>, <code>pepperoni</code>.</li>
+								<li class="fragment fade-up">Utilisez <code>console.log()</code> pour afficher le tableau <code>pizzaToppings</code> dans la console.</li>
+							</ul>
+							<p class="fragment fade-up">La console doit afficher <code>["tomato sauce", "cheese", "pepperoni"]</code></p>
+						</small>
+					</section>
+					<section>
+						<p>On peut accéder aux cases du tableau via leurs index.</p>
+						<p>Les index doivent être des nombres allant de zero à la longueur du tableaux moins un.</p>
+					</section>
+					<section>
+						<p>Voici un exemple :</p>
+						<pre><code class="hljs javascript" data-trim contenteditable>
+							var pets = ['cat', 'dog', 'rat'];
+							console.log(pets[0]);
+						</code></pre>
+						<p>Le code ci-dessus affichera le premier élément du tableau <code>pets</code> : la chaine de caractères <code>cat</code>.</p>
+					</section>
+					<section>
+						<p>On ne doit accéder aux éléments de tableaux qu'au travers de la notation « crochets » : la notation en point est invalide.</p>
+						<p>Notation valide :</p>
+						<pre><code class="hljs javascript" data-trim contenteditable>
+							console.log(pets[0]);
+						</code></pre>
+						<p>Notation invalide :</p>
+						<pre><code class="hljs javascript" data-trim contenteditable>
+							console.log(pets.1);
+						</code></pre>
+					</section>
+					<section>
+						<h2>Exercice</h2>
+						<small>
+							<ul>
+								<li class="fragment fade-up">
+									Définissez un tableau <code>food</code> :
+									<pre><code class="hljs javascript" data-trim contenteditable>
+										var food = ['apple', 'pizza', 'pear'];
+									</pre></code>
+								</li>
+								<li class="fragment fade-up">Utilisez <code>console.log()</code> pour afficher la deuxième valeur du tableau dans la console.</li>
+							</ul>
+							<p class="fragment fade-up">La console doit afficher <code>"pizza"</code></p>
+						</small>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Objets</h2>
+						<p>Les objets sont des listes de valeurs similaires aux tableaux, sauf que les valeurs sont identifiées par une clé au lieu d'un entier.</p>
+						<p>Voici un exemple :</p>
+						<pre><code class="hljs javascript" data-trim contenteditable>
+							var foodPreferences = {
+							  pizza: 'yum',
+							  salad: 'gross'
+							};
+						</code></pre>
+					</section>
+					<section>
+						<h2>Exercice</h2>
+						<small>
+							<ul>
+								<li class="fragment fade-up">Définissez une variable nommée <code>pizza</code> comme celà :
+									<pre><code class="hljs javascript" data-trim contenteditable>
+										var pizza = {
+										  toppings: ['cheese', 'sauce', 'pepperoni'],
+										  crust: 'deep dish',
+										  serves: 2
+										};
+									</code></pre>
+								</li>
+								<li class="fragment fade-up">Utilisez <code>console.log()</code> pour afficher l'objet <code>pizza</code> dans la console.</li>
+							</ul>
+						</small>
+					</section>
+					<section>
+						<p>Vous pouvez manipuler les <span class="red">propriétés</span> d'objets — les clés et valeurs qu'un objet contient — en utilisant des méthodes très similaires aux tableaux.</p>
+					</section>
+					<section>
+						<p>Voici un exemple utilisant des crochets :</p>
+						<pre><code class="hljs javascript" data-trim contenteditable>
+							var example = {
+							  pizza: 'yummy'
+							};
+
+							console.log(example['pizza']);
+						</code></pre>
+						<p>Le code ci-dessus va afficher la chaine de caractères <code>yummy</code> dans la console.</p>
+					</section>
+					<section>
+						<p>Une alternative consiste à utiliser la notation en point pour avoir le même résultat :</p>
+						<pre><code class="hljs javascript" data-trim contenteditable>
+							example.pizza;
+							example['pizza'];
+						</code></pre>
+						<p>Les deux lignes de code ci-dessus renverront <code>yummy</code>.</p>
+					</section>
+					<section>
+						<h2>Exercice - 1</h2>
+						<small>
+							<ul>
+								<li class="fragment fade-up">Définissez une variable nommée <code>food</code> comme ceci :
+									<pre><code class="hljs javascript" data-trim contenteditable>
+										var food = {
+										  types: 'only pizza'
+										};
+									</code></pre>
+								</li>
+								<li class="fragment fade-up">Utilisez <code>console.log()</code> pour afficher la propriété <code>types</code> de l'objet <code>food</code> dans la console.</li>
+							</ul>
+							<p class="fragment fade-up">La console doit afficher <code>"only pizza"</code></p>
+						</small>
+					</section>
+					<section>
+						<h2>Exercice - 2</h2>
+						<small>
+							<ul>
+								<li class="fragment fade-up">Assignez la chaîne de caractères <code>pizza and beer</code> à la propriété <code>types</code> de l'objet <code>food</code>.</li>
+								<li class="fragment fade-up">Utilisez <code>console.log()</code> pour afficher la propriété <code>types</code> de l'objet <code>food</code> dans la console.</li>
+							</ul>
+							<p class="fragment fade-up">La console doit afficher <code>"pizza and beer"</code></p>
+						</small>
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2>Fonctions</h2>
+						<p>Une fonction est un bloc de code qui prend des entrées, traite ces entrées, et produit une sortie.<p>
+					</section>
+					<section>
+						<p>Voici un exemple :</p>
+						<pre><code class="hljs javascript" data-trim contenteditable>
+							function example(x) {
+							  return x * 2;
+							}
+						</code></pre>
+						<p>Nous pouvons appeler cette fonction comme cela pour récupérer le nombre 10 :</p>
+						<pre><code class="hljs javascript" data-trim contenteditable>
+							example(5);
+						</code></pre>
+					</section>
+					<section>
+						<h2>Exercice</h2>
+						<small>
+							<ul>
+								<li class="fragment fade-up">Définissez une fonction nommée <code>eat</code> qui prend un argument nommé <code>food</code> qui est considéré comme étant une chaîne de caractères.</li>
+								<li class="fragment fade-up">Dans cette fonction, retournez l'argument <code>food</code> comme cela :
+									<pre><code class="hljs javascript" data-trim>
+										return food + ' tasted really good.';
+									</code></pre>
+								</li>
+								<li class="fragment fade-up">Dans les parenthèses de <code>console.log()</code>, appelez la fonction <code>eat()</code> avec la chaîne de caractères <code>bananas</code> comme argument.</li>
+							</ul>
+							<p class="fragment fade-up">La console doit afficher <code>"bananas tasted really good."</code></p>
+						</small>
+					</section>
+					<section>
+						<p>On peut déclarer qu'une fonction reçoit n'importe quel nombre d'arguments. Les arguments peuvent être de n'importe quel type : une chaîne de caractères, un nombre, un tableau, un objet et même une autre fonction.<p>
+					</section>
+					<section>
+						<p>Voici un exemple :</p>
+						<pre><code class="hljs javascript" data-trim contenteditable>
+							function example(firstArg, secondArg) {
+							  console.log(firstArg, secondArg);
+							}
+						</code></pre>
+						<p>Nous pouvons appeler cette fonction avec deux arguments comme cela :</p>
+						<pre><code class="hljs javascript" data-trim contenteditable>
+							example('hello', 'world');
+						</code></pre>
+						<p>L'exemple ci-dessus va afficher <code>hello world</code> dans la console.</p>
+					</section>
+					<section>
+						<h2>Exercice</h2>
+						<small>
+							<ul>
+								<li class="fragment fade-up">Définissez une fonction nommée <code>math</code> qui prend trois arguments. Il est important que vous compreniez que les noms d'arguments ne sont seulement utilisés que pour y faire référence.</li>
+								<li class="fragment fade-up">Nommez chaque argument comme vous le souhaitez.</li>
+								<li class="fragment fade-up">Dans la fonction <code>math</code>, renvoyez la valeur obtenue de la multiplication du second argument avec le troisième et en ajoutant le premier argument au résultat.</li>
+								<li class="fragment fade-up">Après cela, dans les parenthèses de <code>console.log()</code>, appelez la fonction <code>math()</code> avec le nombre <code>53</code> comme premier argument, le nombre <code>61</code> comme second et le nombre <code>67</code> en troisième argument.</li>
+							</ul>
+							<p class="fragment fade-up">La console doit afficher <code>4140</code></p>
+						</small>
+					</section>
+				</section>
+
+				<section>
+					<h2>C'est tout</h2>
+					<h4>Pour le moment</h4>
+					<p>
+						<small>Merci d'avoir suivi !</small>
+					</p>
+				</section>
+		</div>
+
+		<script src="../reveal.js/lib/js/head.min.js"></script>
+		<script src="../reveal.js/js/reveal.js"></script>
+
+		<script>
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: '../reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: '../reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: '../reveal.js/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: '../reveal.js/plugin/zoom-js/zoom.js', async: true },
+					{ src: '../reveal.js/plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
