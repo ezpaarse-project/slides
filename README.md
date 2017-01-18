@@ -1,6 +1,11 @@
 # Slides
 Repository for hosting various slideshows based on [reveal.js](https://github.com/hakimel/reveal.js/). Available at [ezpaarse-project.github.io](https://ezpaarse-project.github.io/slides/).
 
+## Pro tips !
+  - Press `F` to enter fullscreen mode (`Esc` to exit)
+  - Press `Esc` or `O` to toggle overview mode
+  - Press `S` to open the notes window
+
 ## How to add a slideshow
 Create a new directory for your slideshow:
 ```console
