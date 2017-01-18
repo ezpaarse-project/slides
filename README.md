@@ -34,7 +34,5 @@ Here is one solution using Node.js:
 
   # Run the webserver on the root of the repository
   http-server /path/to/the/slides
-  
-  # Browse localhost:8080 with your favourite browser
-  open http://localhost:8080/
 ```
+Then open http://localhost:8080/
